@@ -1,0 +1,13 @@
+---
+# this comment is a hack - as is this
+version: '3'
+services:
+  whoogle-search:
+    image: benbusby/whoogle-search
+    container_name: whoogle-search
+    ports:
+      - 5000:5000
+    restart: unless-stopped
+    deploy:
+      restart_policy:
+        condition: on-failure
